@@ -422,14 +422,15 @@ img {
     appearance: none;
 }
 
-.icon {
-    margin-right: 8.38px;
+.checkbox-icon {
     cursor: pointer;
     fill: none;
-    border: 2px solid var(--main-text);
+    /* border: 2px solid var(--main-text); */
     transition: fill var(--transition-function),
     opacity var(--transition-function);
     opacity: 0;
+    z-index: 1;
+
 }
 
 
@@ -440,29 +441,21 @@ img {
     border-radius: 2px;
 }
 
-
-.lable-checkbox:hover .icon,
-.check:focus + .icon {
+.check:checked ~ .checkbox-icon {
     opacity: 1;
+    border: none; 
 }
-
-.check:checked + .icon {
-    border: none;
-    fill: var(--accent-text);
-    opacity: 1;
-}
+    
 .check-link {
     text-decoration-line: underline;
     color: var(--accent-text);
     display: flex;
-    flex-wrap: none;
 
     font-family: Roboto;
     font-weight: 400;
     font-size: 14px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
-
 }
 
 .check-text {
